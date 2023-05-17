@@ -4,6 +4,11 @@ from schema_jobs.jobs.configuration.table_configs import tables
 
 def deploy_database_tables():
     ""
+    #spark = SparkSession \
+    #    .builder \
+    #    .appName("Schema App") \
+    #    .getOrCreate()
+
     deploy_database()
     for table in tables:
         deploy_table(table)

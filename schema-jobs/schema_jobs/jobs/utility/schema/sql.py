@@ -1,2 +1,5 @@
+from pyspark.sql import SparkSession
+
+
 def deploy_sql(sql:str):
-    spark.sql(sql)
+    SparkSession.getActiveSession().sql(sql)

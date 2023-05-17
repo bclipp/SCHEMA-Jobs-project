@@ -1,5 +1,7 @@
 from schema_jobs.jobs.configuration.database_configuration import DatabaseConfig
+from pyspark.sql import SparkSession
 
 
 def deploy_database(config: DatabaseConfig):
-    spark.sql(f"CREATE DATABASE IF NOT EXISTS {DatabaseConfig.database_name};")
+    SparkSession.getActiveSession()
+    SparkSession.getActiveSession().sql(f"CREATE DATABASE IF NOT EXISTS {DatabaseConfig.database_name};")
