@@ -1,12 +1,24 @@
-from dataclasses import dataclass
+"""
+fill in
 
+"""
 import abc
+from dataclasses import dataclass
 
 
 class DatabaseConfig(abc.ABC):
-    pass
+    """
+    fill in
+
+    """
+
+    database_name = "dev"
 
 
 @dataclass
 class DatabaseConfiguration(DatabaseConfig):
+    """
+    fill in
+    """
+
     database_name = "dev"

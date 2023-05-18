@@ -1,11 +1,19 @@
+"""
+fill in
+
+"""
+
 from schema_jobs.jobs.configuration.database_configuration import DatabaseConfiguration
+from schema_jobs.jobs.configuration.table_configs import tables
 from schema_jobs.jobs.utility.schema.database import deploy_database
 from schema_jobs.jobs.utility.schema.table import deploy_table
-from schema_jobs.jobs.configuration.table_configs import tables
+
 
 def deploy_database_tables():
-    ""
-    #spark = SparkSession \
+    """
+    fill in
+    """
+    # spark = SparkSession \
     #    .builder \
     #    .appName("Schema App") \
     #    .getOrCreate()

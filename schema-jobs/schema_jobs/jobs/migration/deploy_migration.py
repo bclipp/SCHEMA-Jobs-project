@@ -1,8 +1,15 @@
+"""
+fill in
+
+"""
+
 from schema_jobs.jobs.utility.schema.migration import migrations
 
 
 def deploy_migration():
-    ""
+    """
+    fill in
+    """
     for migration in migrations:
         deploy_migration(migration())
 
