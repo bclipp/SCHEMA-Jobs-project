@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "schema-jobs"
-version = "0.1.0"
+version = "0.1.5"
 description = ""
 authors = ["Brian L <bclipp770@gmail.com>"]
 readme = "README.md"
@@ -8,6 +8,8 @@ packages = [{include = "schema_jobs"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pyspark = "^3.4.0"
+pre-commit = "^3.3.2"
 
 
 [tool.poetry.group.dev.dependencies]
