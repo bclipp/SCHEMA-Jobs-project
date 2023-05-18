@@ -8,5 +8,5 @@ class DatabaseConfig(abc.ABC):
 
 
 @dataclass
-class TableConfigBronzeMachineRaw(DatabaseConfig):
+class DatabaseConfiguration(DatabaseConfig):
     database_name = "dev"
