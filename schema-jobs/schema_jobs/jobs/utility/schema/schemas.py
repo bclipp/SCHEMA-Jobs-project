@@ -3,8 +3,9 @@ fill in
 """
 
 from pyspark.sql.types import (
-    BinaryType,
-    FloatType,
+    BooleanType,
+    BooleanType,
+    DoubleType,
     IntegerType,
     StringType,
     StructField,
@@ -18,9 +19,9 @@ def bronze_machine_raw():
     """
     schema = StructType(
         [
-            StructField("N8j2", FloatType(), True),
-            StructField("42mj", FloatType(), True),
-            StructField("6tk3", BinaryType(), True),
+            StructField("N8j2", DoubleType(), True),
+            StructField("42mj", DoubleType(), True),
+            StructField("6tk3", BooleanType(), True),
         ]
     )
     return schema
@@ -32,9 +33,9 @@ def silver_machine_raw():
     """
     schema = StructType(
         [
-            StructField("N8j2", FloatType(), True),
-            StructField("42mj", FloatType(), True),
-            StructField("6tk3", BinaryType(), True),
+            StructField("N8j2", DoubleType(), True),
+            StructField("42mj", DoubleType(), True),
+            StructField("6tk3", BooleanType(), True),
             StructField("engine_type", StringType(), True),
         ]
     )
@@ -50,8 +51,8 @@ def bronze_sap_bseg():
             StructField("MANDT", StringType(), True),
             StructField("BUKRS", StringType(), True),
             StructField("BELNR", StringType(), True),
-            StructField("GJAHR", FloatType(), True),
-            StructField("BUZEI", FloatType(), True),
+            StructField("GJAHR", DoubleType(), True),
+            StructField("BUZEI", DoubleType(), True),
         ]
     )
     return schema
@@ -64,11 +65,11 @@ def bronze_sales():
     schema = StructType(
         [
             StructField("ORDERNUMBER", IntegerType(), True),
-            StructField("SALE", FloatType(), True),
-            StructField("ORDERDATE", IntegerType(), True),
-            StructField("STATUS", BinaryType(), True),
+            StructField("SALE", DoubleType(), True),
+            StructField("ORDERDATE", StringType(), True),
+            StructField("STATUS", BooleanType(), True),
             StructField("CUSTOMERNAME", StringType(), True),
-            StructField("ADDRESSLINE", IntegerType(), True),
+            StructField("ADDRESSLINE", StringType(), True),
             StructField("CITY", StringType(), True),
             StructField("STATE", StringType(), True),
             StructField("STORE", StringType(), True),
@@ -84,8 +85,8 @@ def gold_sales():
     schema = StructType(
         [
             StructField("CUSTOMERNAME", StringType(), True),
-            StructField("AVG", FloatType(), True),
-            StructField("TOTAL", FloatType(), True),
+            StructField("AVG", DoubleType(), True),
+            StructField("TOTAL", DoubleType(), True),
         ]
     )
     return schema
