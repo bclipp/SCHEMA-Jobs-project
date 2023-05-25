@@ -9,7 +9,7 @@ from schema_jobs.jobs.utility.schema.schemas import (
     bronze_machine_raw,
     bronze_sales,
     bronze_sap_bseg,
-    gold_sales,
+    gold_sales, silver_machine_raw,
 )
 
 
@@ -31,9 +31,20 @@ class TableConfigBronzeMachineRaw(TableConfig):
 
     """
 
-    table_name = "machine_raw"
+    table_name = "bronze_machine_raw"
     database_name = "dev"
     schema = bronze_machine_raw()
+
+
+class TableConfigSilverMachineRaw(TableConfig):
+    """
+    fill in
+
+    """
+
+    table_name = "silver_machine_raw"
+    database_name = "dev"
+    schema = silver_machine_raw()
 
 
 @dataclass
@@ -43,7 +54,7 @@ class TableConfigBronzSapBseg(TableConfig):
 
     """
 
-    table_name = "sap_bseg"
+    table_name = "bronze_sap_bseg"
     database_name = "dev"
     schema = bronze_sap_bseg()
 
@@ -55,7 +66,7 @@ class TableConfigBronzeSales(TableConfig):
 
     """
 
-    table_name = "sales"
+    table_name = "bronze_sales"
     database_name = "dev"
     schema = bronze_sales()
 
@@ -76,5 +87,6 @@ tables = [
     TableConfigBronzeMachineRaw,
     TableConfigBronzSapBseg,
     TableConfigBronzeSales,
+    TableConfigSilverMachineRaw,
     TableConfigGoldSales,
 ]

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "schema-jobs"
-version = "0.1.5"
+version = "0.1.15"
 description = ""
 authors = ["Brian L <bclipp770@gmail.com>"]
 readme = "README.md"
